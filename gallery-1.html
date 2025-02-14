@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #34495e;
+            padding: 25px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+        }
+        .sidebar img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 4px solid white;
+        }
+        .sidebar a {
+            display: block;
+            background-color: #1abc9c;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            margin: 8px 0;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            width: 90%;
+            transition: 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #16a085;
+        }
+        .content {
+            flex: 1;
+            padding: 50px;
+            background: white;
+            border-radius: 10px;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .carousel {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .carousel img {
+            width: 100%;
+            display: none;
+            border-radius: 10px;
+        }
+        .carousel img.active {
+            display: block;
+        }
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .prev { left: 10px; }
+        .next { right: 10px; }
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            position: relative;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Justine Paul E. Anghag - Gallery</div>
+    <div class="container">
+        <div class="sidebar">
+            <img src="assets/images/jp2.jpg" alt="Profile Picture">
+            <a href="AboutMe.html">About Me</a>
+            <a href="Subjecttaken-1.html">Subjects Taken</a>
+            <a href="Currentlyenrolled-1.html">Enrolled</a>
+            <a href="Contact-1.html">Contact Me</a>
+            <a href="favorites-1.html">My Favorites</a>
+            <a href="gallery-1.html" class="active">Gallery</a>
+        </div>
+        <div class="content">
+            <h2>Gallery</h2>
+            <div class="carousel">
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <img src="assets/images/jp1.jpg" class="active">
+                <img src="assets/images/jp4.jpg">
+                <img src="assets/images/jp6.jpg">
+                <img src="assets/images/jp10.jpg">
+                <img src="assets/images/jp13.jpg">
+                <img src="assets/images/jp12.jpg">
+                <img src="assets/images/jp15.jpg">
+                <img src="assets/images/jp14.jpg">
+                <img src="assets/images/jp8.jpg">
+                <img src="assets/images/jp7.jpg">
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">© 2024 - 2025 ITP4 | All Rights Reserved</div>
+    
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll(".carousel img");
+        
+        function changeSlide(direction) {
+            slides[slideIndex].classList.remove("active");
+            slideIndex = (slideIndex + direction + slides.length) % slides.length;
+            slides[slideIndex].classList.add("active");
+        }
+    </script>
+</body>
+</html>

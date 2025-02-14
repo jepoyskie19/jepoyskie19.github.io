@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subjects Taken</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .header {
+            background-color: #2C3E50;
+            color: white;
+            text-align: left;
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #2C3E50;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 20px;
+            box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 4px solid white;
+        }
+
+        .sidebar a {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            text-align: center;
+            background-color: #34495E;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #1ABC9C;
+        }
+
+        .content {
+            flex: 1;
+            padding: 40px;
+            background-color: white;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        h2, h3 {
+            text-align: left;
+            color: #2C3E50;
+        }
+
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px 20px;
+            text-align: center;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        th {
+            background-color: #BDC3C7;
+        }
+
+        tr:nth-child(even) {
+            background-color: #ECF0F1;
+        }
+
+        .footer {
+            background-color: #2C3E50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .pagination {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .pagination button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #2C3E50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        .pagination button:hover {
+            background-color: #1ABC9C;
+        }
+
+        .pagination button:disabled {
+            background-color: #BDC3C7;
+            cursor: not-allowed;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">Justine Paul Anghag</div>
+    <div class="container">
+        <div class="sidebar">
+            <img src="assets/images/jp2.jpg" alt="Profile Picture">
+            <a href="Aboutme.html">About Me</a>
+            <a href="Subjecttaken-1.html">Subject Taken</a>
+            <a href="Currentlyenrolled-1.html">Enrolled</a>
+            <a href="Contact-1.html">Contact Me</a>
+            <a href="favorites-1.html">My Favorites</a>
+            <a href="gallery-1.html">Gallery</a>
+        </div>
+        <div class="content">
+            <h2>Subjects Taken</h2>
+            <div id="subject-pages">
+                <div class="page">
+                    <h3>1ST YEAR (FIRST SEMESTER 2023-2024)</h3>
+                    <table>
+                        <tr><th>Subject Name</th><th>Description</th><th>Units</th></tr>
+                        <tr><td>OC1</td><td>ORIENTATION COURSE 1</td><td>3</td></tr>
+                        <tr><td>CSIT 1</td><td>INTRODUCTION TO COMPUTING</td><td>3</td></tr>
+                        <tr><td>CSIT 2</td><td>FUNDAMENTALS OF PROGRAMMING/COMPUTER PROGRAMMING 1</td><td>3</td></tr>
+                        <tr><td>NSTP 1L</td><td>NSTP 1-LITERACY TRAINING SERVICE (LTS)</td><td>3</td></tr>
+                        <tr><td>PE 1</td><td>PATH FIT 1: MOVEMENT COMPETENCY TRAINING</td><td>2</td></tr>
+                        <tr><td>SOC SCI 1</td><td>UNDERSTANDING THE SELF</td><td>3</td></tr>
+                        <tr><td>ENGL A</td><td>GRAMMAR AND SPEECH ENHANCEMENT</td><td>3</td></tr>
+                    </table>
+                </div>
+                <div class="page" style="display: none;">
+                    <h3>1ST YEAR (SECOND SEMESTER 2023-2024)</h3>
+                    <table>
+                        <tr><th>Subject Name</th><th>Description</th><th>Units</th></tr>
+                        <tr><td>CSIT 3</td><td>INTERMEDIATE PROGRAMMING / COMPUTER PROGRAMMING 2</td><td>3</td></tr>
+                        <tr><td>ITP 1</td><td>IT FUNDAMENTALS</td><td>3</td></tr>
+                        <tr><td>ITP 2</td><td>DISCRETE MATHEMATICS</td><td>3</td></tr>
+                        <tr><td>MATH 1</td><td>MATHEMATICS IN THE MODERN WORLD</td><td>3</td></tr>
+                        <tr><td>NSTP 1L</td><td>NSTP 2-LITERACY TRAINING SERVICE II</td><td>3</td></tr>
+                        <tr><td>PE 2</td><td>PATH FIT 2: FITNESS TRAINING</td><td>2</td></tr>
+                        <tr><td>EP 1S</td><td>ENGLISH PROFICIENCY - START 1</td><td>3</td></tr>
+                    </table>
+                </div>
+                <div class="page" style="display: none;">
+                    <h3>2ND YEAR (FIRST SEMESTER 2024-2025)</h3>
+                    <table>
+                        <tr><th>Subject Name</th><th>Description</th><th>Units</th></tr>
+                        <tr><td>CSIT 4</td><td>DATA STRUCTURES AND ALGORITHMS</td><td>3</td></tr>
+                        <tr><td>ITP 3</td><td>NETWORKING 1 (CISCO: NETWORKING BASICS)</td><td>3</td></tr>
+                        <tr><td>ITEL 1A</td><td>IT ELECTIVE 1: PLATFORM TECHNOLOGIES</td><td>3</td></tr>
+                        <tr><td>ITEL 2A</td><td>IT ELECTIVE 2: OBJECT-ORIENTED PROGRAMMING</td><td>3</td></tr>
+                        <tr><td>HST 1</td><td>READINGS IN PHILIPPINE HISTORY</td><td>3</td></tr>
+                        <tr><td>SOC ECON 1</td><td>THE CONTEMPORARY WORLD</td><td>3</td></tr>
+                        <tr><td>PE 3</td><td>PATH FIT 3: SWIMMING</td><td>2</td></tr>
+                    </table>
+                </div>
+            </div>
+            <div class="pagination">
+                <button onclick="showPage(0)">Page 1</button>
+                <button onclick="showPage(1)">Page 2</button>
+                <button onclick="showPage(2)">Page 3</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showPage(pageIndex) {
+            document.querySelectorAll(".page").forEach((page, index) => {
+                page.style.display = index === pageIndex ? "block" : "none";
+            });
+        }
+    </script>
+</body>
+</html>
